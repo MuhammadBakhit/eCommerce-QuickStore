@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="./css/responsivePage.css">
+    <style>
+        .cart-message {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 15px;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .cart-item {
+            margin-bottom: 15px;
+        }
+
+        .center-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .center-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .number-spinner {
+            display: flex;
+            align-items: center;
+        }
+
+        .number-spinner button {
+            background-color: #ddd;
+            border: none;
+            padding: 5px 10px;
+        }
+
+        .number-spinner input {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!-- Start Header-->
+<header class="container-fluid"  id="header">
+<div class="topHeader">
+    <div class="left">
+        <div class="descound">Free shipping on all orders over $100</div>
+    </div>
+    <div class="right">
+        <div class="accounts">
+            <a href="./login.html">
+                <i id="loginIcon" class="iconOne fa-solid fa-user"></i>
+            </a>
+            <button id="logoutButton" class="btn btn-danger" 
+            style="
+                display: none; 
+                font-size: 20px; 
+                background: transparent; 
+                border: none;">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+        <div class="shopCart">
+            <div class="cartIcon">
+                <i class="icon fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="bottomHeader">
+  <div class="d-flex align-items-center">
+    <div class="smallDevise">
+      <i class="icon  bar  fa-solid fa-bars"></i>
+    </div>
+    <div class="logo">
+      <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604181/logo_ci8ide.png" alt="">
+    </div>
+    <div class="linksHeader" id="linksHeader">
+      <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./product.html">Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="search">
+      <input type="search" name="search" placeholder="Search Product Here...">
+      <i class="icon fa-solid fa-magnifying-glass"></i>
+  </div>
+</div>
+</header>
+<!-- End Header -->
+<section class="loginPage">
+<div class="navLog">
+    <div class="container">
+        <nav>
+            <h2>Cart</h2>
+            <p><a href="./index.html">Ecommerce</a> &nbsp; &nbsp;>&nbsp; &nbsp;<Span>Cart</Span></p>
+        </nav>
+    </div>
+</div>
+<div class="container mt-4">
+    <div class="row justify-content-between">
+        <div class="col-lg-7">
+            <h3 class="mb-5">Your Cart</h3>
+            <div id="cartContainer">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+
+            <div id="paginationContainer" class="mt-4 d-flex justify-content-center">
+                <!-- Pagination controls will be added here -->
+            </div>
+        </div>
+
+        <div class="col-lg-4 mt-4">
+            <div id="order-summary" class="p-4 me-3 mt-5 border rounded shadow-sm">
+                <h4 class="fw-bold mb-5">Order Summary</h4>
+
+                <div class="d-flex justify-content-between">
+                    <p class="fw-bold text-muted mb-4 w-100 text-start">Total Items: </p> 
+                    <span class="text-dark fw-bold mb-4" id="total-items">0</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="fw-bold text-muted">Shipping:</p>
+                    <span class="text-dark fw-bold">Free</span>
+                </div>
+
+                <hr>
+
+                <div class="my-4" id="totalPriceContainer">
+                    <p class="fw-bold text-muted">Total Items: <span id="total-items">0</span></p>
+                    <p class="text-dark fw-bold">Total Price: <span id="total-price">0 EGP</span></p>
+                </div>
+                <button class="btn bg-dark text-white w-100" onclick="processPayment()">Online Payment</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+<!-- Start Key Footer -->
+<section class="subscribe mt-5">
+<div class="container">
+    <div class="contain">
+        <div class="input position-relative">
+            <div class="row sub d-flex justify-content-center align-items-center">
+                <div class="col-sm-12 col-lg-5 sign d-flex align-items-center justify-content-center">
+                      <img src="../image/icon5.svg" alt="" style="width: 50px; margin-right: 5px;">
+                    <h4>Sign up for newsletter</h4>
+                </div>
+                <form class="col-sm-12 col-lg-7 subscribe-form justify-content-center">
+                    <p>Get 30% discount on your next purchase.</p>
+                    <input type="email" id="email" placeholder="Enter your email...">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- End Key Footer -->
+<!-- Start Footer -->
+<div class="footer">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <h4 class="mb-4 text-white">Contact Us</h4>
+            <p>502 New design str, melbourne, san francisco, CA 94110, united states of america.</p>
+            <p>01095317807</p>
+            <p>mohamedbakhetoiu@gmail.com</p>
+            <div class="link">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-2">
+            <h4 class="mb-5 text-white">My Account</h4>
+            <p><a href="">> My Account</a></p>
+            <p><a href="">> Order History</a></p>
+            <p><a href="">> Wish List</a></p>
+            <p><a href="">> Affiliates</a></p>
+            <p><a href="">> Contact Us</a></p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-2">
+            <h4 class="mb-5 text-white">Information</h4>
+            <p><a href="">> About Us</a></p>
+            <p><a href="">> Delivery Information</a></p>
+            <p><a href="">> Privacy Policy</a></p>
+            <p><a href="">> Terms & Conditions</a></p>
+            <p><a href="">> Blogs</a></p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-2">
+            <h4 class="mb-5 text-white">Extras</h4>
+            <p><a href="">> Site Map</a></p>
+            <p><a href="">> Newsletter</a></p>
+            <p><a href="">> Brands</a></p>
+            <p><a href="">> Contact Us</a></p>
+            <p><a href="">> Specials</a></p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+            <h4 class="mb-5 text-white">Our App</h4>
+            <p>Download our Apps and get
+            brextra 15% Discount on your first Order…!</p>
+            <div class="img d-flex gap-2 mt-4">
+                <img class="w-50" src="../image/1.png" alt="">
+                <img class="w-50" src="../image/2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="d-flex justify-content-between align-items-center">
+    <div class="p">
+        <p class="m-0">Powered By OpenCart QuickStore © 2024</p>
+    </div>
+    <div class="visa">
+        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604179/maestro_jd7srl.png" alt="">
+        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604179/mastercard_xojxca.png" alt="">
+        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604180/paypal_ntv96n.png" alt="">
+        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604181/visa_f5dipz.png" alt="">
+    </div>
+</footer>
+</div>
+</section>
+<!-- End Footer -->
+
+
+<script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./js/all.min.js"></script>
+<script src="./js/cart.js"></script>
+</body>
+</html>

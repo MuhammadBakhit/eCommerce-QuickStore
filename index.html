@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/responsivePage.css">
+    <!-- Swiper File -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+<!-- Start Header-->
+<header class="container-fluid w-100"  id="header">
+<div class="topHeader">
+    <div class="left">
+        <div class="descound">Free shipping on all orders over $100</div>
+    </div>
+    <div class="right">
+        <div class="accounts">
+            <a href="./login.html">
+                <i id="loginIcon" class="iconOne fa-solid fa-user"></i>
+            </a>
+            <button id="logoutButton" class="btn btn-danger" 
+            style="
+                display: none;
+                font-size: 20px;
+                background: transparent;
+                border: none;">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+        <div class="shopCart">
+            <div class="cartIcon">
+                <a href="./cart.html" class="nav-cart">
+                  <i class="icon fa-solid fa-cart-shopping"></i>
+                  <span>0</span>
+              </a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="bottomHeader">
+  <div class="d-flex align-items-center">
+    <div class="logo">
+      <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604181/logo_ci8ide.png" alt="">
+    </div>
+    <div class="linksHeader" id="linksHeader">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="./product.html">Products</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="search">
+        <input type="search" name="search" placeholder="Search Product Here...">
+        <div class="icons d-none">
+            <i class="iconsearch fa-solid fa-magnifying-glass"></i>
+            <a href="./login.html" id="loginIcon" style="display: block;">
+                <i class="iconOne fa-solid fa-user"></i>
+            </a>
+            <i id="logoutButton" class="fas fa-sign-out-alt" style="display: none; font-size: 24px; cursor: pointer;" title="Logout"></i>            
+            
+            <a href="./cart.html" class="nav-cart">
+                <i class="iconCart fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </a>
+        </div>
+        <i class="icon fa-solid fa-magnifying-glass"></i>
+  </div>
+</div>
+</header>
+<div id="toast" class="toast">Logged Out Successfully!</div>
+<!-- End Header -->
+<!-- Start Section -->
+<div class="landing">
+<div class="slider-container">
+    <div class="slider">
+    <div class="slide active">
+        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729621992/landing1_oxwebp.jpg" alt="landing image">
+        <div class="info">
+            <h1 class="name">iPhone 15 Pro Max</h1>
+            <h4 class="description">Supercharged For Pros</h4>
+            <h4 class="price">$999.00</h4>
+            <p>From $999.00 or $41.62/mo.per month</p>
+            <div class="buttons">
+                <a href="#" class="buy">Buy Now</a>
+                <a href="#" class="more">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729621992/landing2_rqgxna.jpg" alt="landing image">
+        <div class="info">
+            <h1 class="name">Electronic Essentials</h1>
+            <h4 class="description">50% off order above</h4>
+            <h4 class="price">$999.00</h4>
+            <p>From $999.00 or $41.62/mo.per month</p>
+            <div class="buttons">
+                <a href="#" class="buy">Buy Now</a>
+                <a href="#" class="more">Learn More</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="nav-arrows">
+    <button id="prevBtn" onclick="moveSlide(-1)">&#10094;</button>
+    <button id="nextBtn" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</div> 
+</div>
+<!-- End Section -->
+<!-- Start Catogereis -->
+<section class=" trending">
+<div class="container-fluid">
+<h3 class="trendingTitle">Trending Categories</h3>
+<hr>
+<div class="swiper mySwipertrending reveal">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604996/catogr1_nwq62i.jpg" alt="">
+            </div>
+            <a href="#">Computers</a>
+        </div>
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604997/catogr2_tbfh8u.jpg" alt="">
+            </div>
+            <a href="#">Mini Speakers</a>
+        </div>
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604997/catogr3_vx43i4.jpg" alt="">
+            </div>
+            <a href="#">Tablets</a>
+        </div>
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604999/catogr4_lbkalr.jpg" alt="">
+            </div>
+            <a href="#">AirPods</a>
+        </div>
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729605000/catogr6_kaiydq.jpg" alt="">
+            </div>
+            <a href="#">Smart Watch</a>
+        </div>
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729605002/catogr8_awswcs.jpg" alt="">
+            </div>
+            <a href="#">Iphone</a>
+        </div>
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729605001/catogr7_bjbnz5.jpg" alt="">
+            </div>
+            <a href="#">HeadPhones</a>
+        </div>
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729605000/catogr5_rqgcmd.jpg" alt="">
+            </div>
+            <a href="#">Labtop</a>
+        </div>
+        <div class="swiper-slide">
+            <div class="trendingImg">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729605003/catogr9_sgyfxa.jpg" alt="">
+            </div>
+            <a href="#">Airpods</a>
+        </div>
+    </div>
+</div>
+<div class="banner reveal">
+    <div class="productList row">
+        <div class="product col-sm-12 col-md-6 col-lg-4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604864/banner-01_uxkwxf.jpg" alt="">
+            </div>
+            <div class="info">
+                <span class="desc">Big saving</span>
+                <h1 class="name">Smartwatch 7 <br> light on price.</h1>
+                <p  class="price">From $399.00</p>
+                <a class="buy" href="#">Buy Now</a>
+            </div>
+        </div>
+        <div class="product col-sm-12 col-md-6 col-lg-4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604865/banner-02_cwfpga.jpg" alt="">
+            </div>
+            <div class="info">
+                <span class="desc">15% off</span>
+                <h1 class="name">Galaxy S13 lite <br> love the price.</h1>
+                <p  class="price">From $429.00</p>
+                <a class="more" href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="product col-sm-12 col-md-6 col-lg-4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604865/banner-03_foxemo.jpg" alt="">
+            </div>
+            <div class="info">
+                <span class="desc">Flat 20% off</span>
+                <h1 class="name">Five bold colors <br> $99 each.</h1>
+                <p  class="price">From $290.00</p>
+                <a class="buy" href="#">Buy Now</a>
+            </div>
+        </div>
+        <div class="product col-sm-12 col-md-6 col-lg-4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604866/banner-04_w3rvcy.jpg" alt="">
+            </div>
+            <div class="info">
+                <span class="desc">Best price</span>
+                <h1 class="name">5th generation <br> AirPods.</h1>
+                <p  class="price">From $400.00</p>
+                <a class="more" href="#">Learn More</a>
+            </div>
+        </div>
+        <div class="product col-sm-12 col-md-6 col-lg-4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604867/banner-05_pprq97.jpg" alt="">
+            </div>
+            <div class="info">
+                <span class="desc">Over 50%</span>
+                <h1 class="name">Headset max 3rd <br> Generation</h1>
+                <p  class="price">From $550.00</p>
+                <a class="buy" href="#">Buy Now</a>
+            </div>
+        </div>
+        <div class="product col-sm-12 col-md-6 col-lg-4">
+            <div class="img">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604868/banner-06_dc0ppo.jpg" alt="">
+            </div>
+            <div class="info">
+                <span class="desc">Save extra</span>
+                <h1 class="name">Mac book pro. <br> new arrival</h1>
+                <p  class="price">From $3500.00</p>
+                <a class="more" href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<!-- End Catogereis -->
+<!-- Our Trending Product -->
+ <div class="our">
+    <div class="container-fluid reveal">
+        <div class="navv d-flex justify-content-between align-items-center">
+            <ul class="nav align-items-center">
+                <li class="nav-item">
+                <a class="nav-link active"href="#">Our Trending Products</a>
+                </li>
+                <li class="nav-item position-relative">
+                <a class="nav-link activty" href="#">New Products</a>
+                </li>
+            </ul>
+            <div class="arrow">
+                <i class="fa-solid fa-angle-left prev-btn" onclick="slideLeft()"></i>
+                <i class="fa-solid fa-angle-right next-btn" onclick="slideRight()"></i>
+            </div>
+        </div>
+        <div id="products" class="row gap-1 mx-0 w-100 justify-content-evenly">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header p-0 align-items-center">
+                <h5 class="modal-title text-black" id="productDetailsModalLabel">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modall d-flex justify-content-between align-items-start">
+                <div class="card col-md-6 p-2">
+                    <div class="box">
+                        <img src="" class="card-img-top" id="modalProductImage" alt="">
+                    </div>
+                    <div class="hart">
+                        <a href=""><i class="fa-regular fa-heart"></i></a>
+                    </div>
+                    <div class=" data text-start">
+                        <p class="card-text" id="modalProductCategory">Category</p>
+                        <h5 class="card-title" id="modalProductTitle">Product Title</h5>
+                        <div class="stars">
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-regular fa-star"></i></a>
+                        </div>
+                        <p class="card-text par" id="modalProductPrice">$0.00</p>
+                    </div>
+                </div>
+                <div class="col-md-6 content ms-3">
+                    <div class="d-flex flex-column align-items-start">
+                        <h5 class="fw-bold text-black">Additional Details</h5>
+                        <p id="modalProductDescription" class="text-start text-black-50">Description of the product goes here.</p>
+                    </div>
+                    <div class="icon-buttons d-flex mt-3 mb-5 fs-3">
+                        <a href="#" class="me-4 text-black iconbutt"><i class="fa-solid fa-cart-plus"></i></a>
+                        <a href="#" class="me-4 text-black iconbutt"><i class="fa-solid fa-share-alt"></i></a>
+                    </div>
+                    <button class="btnn" onclick="addToCart(productId)">Check Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Our Trending Product -->
+<!-- Special Products -->
+<div class="special reveal">
+<div class="container-fluid row">
+    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+        <div class="navv d-flex justify-content-between align-items-center">
+            <ul class="nav align-items-center">
+                <li class="nav-item">
+                <a class="nav-link active"href="#">Special Products</a>
+                </li>
+            </ul>
+            <div class="arrow">
+                <i class="fa-solid fa-angle-left prev-btn" onclick="slideLeft()"></i>
+                <i class="fa-solid fa-angle-right next-btn" onclick="slideRight()"></i>
+            </div>
+        </div>
+        <div id="special" class="boxs">
+            <div class="box p-4">
+                <div class="row">
+                    <div class="imgs col-4">
+                        <i class="fa-solid fa-angle-down" onclick="slideRight()"></i>
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1726746819/b3fmbml9r2tnsqkdmcq7.jpg" class="card-img-top" alt="${products[i].title}">
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1726746819/mx9uskhucrrv81xogwer.jpg" class="card-img-top" alt="${products[i].title}">
+                        <i class="fa-solid fa-angle-up" onclick="slideLeft()"></i>
+                    </div>
+                    <div class="img col-8 position-relative">
+                        <span class="span">-357056%</span>
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1726746819/kqoir8nc7dbuyxntkczq.jpg" class="card-img-top" alt="${products[i].title}">
+                    </div>
+                </div>
+                <div class="card-body data">
+                    <p class="card-text">Smart Watch</p>
+                    <h5 class="card-title">E Circle Men’s Smart Watch for Android Phone Night Black</h5>
+                    <div class="stars">
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                        <a href=""><i class="fa-solid fa-star"></i></a>
+                        <a href=""><i class="fa-regular fa-star"></i></a>
+                    </div>
+                    <p class="card-text par">$800 </p>
+                    <button class="btnn" onclick="addToCart('${products[i].id}')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-8">
+        <div class="navv d-flex justify-content-between align-items-center">
+            <ul class="nav align-items-center">
+                <li class="nav-item">
+                <a class="nav-link active"href="#">Bestsellers</a>
+                </li>
+            </ul>
+        </div>
+        <div id="bestsellers" class="row best">
+            <div class="col-sm-12 col-md-12 col-lg-6 cards">
+                <div class="boxx row">
+                    <div class="box col-4 position-relative">
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1728115989/image11_lbrrz7.jpg" class="card-img-top" alt="${products[i].title}">
+                        <div class="hart">
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="content col-8 data">
+                        <p class="card-text">Smart Watch</p>
+                        <h5 class="card-title">E Circle Men’s Smart Watch for Android Phone Night Black</h5>
+                        <div class="stars">
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-regular fa-star"></i></a>
+                        </div>
+                        <p class="card-text par">$8520</p>
+                    </div>
+                </div>
+                <div class="boxx row">
+                    <div class="box col-4 position-relative">
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1726746819/kftuua9ino8ulsv9mld6.jpg" class="card-img-top" alt="${products[i].title}">
+                        <div class="hart">
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="content col-8 data">
+                        <p class="card-text">Smart Watch</p>
+                        <h5 class="card-title">E Circle Men’s Smart Watch for Android Phone Night Black</h5>
+                        <div class="stars">
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-regular fa-star"></i></a>
+                        </div>
+                        <p class="card-text par">$8520</p>
+                    </div>
+                </div>
+                <div class="boxx row">
+                    <div class="box col-4 position-relative">
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1728115804/image10.10_flyexi.jpg" class="card-img-top" alt="${products[i].title}">
+                        <div class="hart">
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="content col-8 data">
+                        <p class="card-text">Smart Watch</p>
+                        <h5 class="card-title">E Circle Men’s Smart Watch for Android Phone Night Black</h5>
+                        <div class="stars">
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-regular fa-star"></i></a>
+                        </div>
+                        <p class="card-text par">$8520</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 cards">
+                <div class="boxx row">
+                    <div class="box col-4 position-relative">
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1728115414/image9_qpwjsf.jpg" class="card-img-top" alt="${products[i].title}">
+                        <div class="hart">
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="content col-8 data">
+                        <p class="card-text">Smart Watch</p>
+                        <h5 class="card-title">E Circle Men’s Smart Watch for Android Phone Night Black</h5>
+                        <div class="stars">
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-regular fa-star"></i></a>
+                        </div>
+                        <p class="card-text par">$8520</p>
+                    </div>
+                </div>
+                <div class="boxx row">
+                    <div class="box col-4 position-relative">
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1728115804/image10_ybf3or.jpg" class="card-img-top" alt="${products[i].title}">
+                        <div class="hart">
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="content col-8 data">
+                        <p class="card-text">Smart Watch</p>
+                        <h5 class="card-title">E Circle Men’s Smart Watch for Android Phone Night Black</h5>
+                        <div class="stars">
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-regular fa-star"></i></a>
+                        </div>
+                        <p class="card-text par">$8520</p>
+                    </div>
+                </div>
+                <div class="boxx row">
+                    <div class="box col-4 position-relative">
+                        <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1728116079/image12_geayty.jpg" class="card-img-top" alt="${products[i].title}">
+                        <div class="hart">
+                            <a href=""><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="content col-8 data">
+                        <p class="card-text">Smart Watch</p>
+                        <h5 class="card-title">E Circle Men’s Smart Watch for Android Phone Night Black</h5>
+                        <div class="stars">
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-solid fa-star"></i></a>
+                            <a href=""><i class="fa-regular fa-star"></i></a>
+                        </div>
+                        <p class="card-text par">$8520</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- End Special Products -->
+<!-- Start product 3-->
+<section class="productOfer">
+<div class="container-fluid">
+    <div class="banner reveal">
+        <div class="productList row">
+            <div class="product col-sm-12 col-md-6 col-lg-4">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604765/bottombanner-01_m9mujb.jpg" alt="">
+                </div>
+                <div class="info">
+                    <span class="desc">Big saving</span>
+                    <h1 class="name">Galaxy S13 lite <br> love the price.</h1>
+                    <p  class="price">From $499.00</p>
+                    <a class="buy" href="#">Buy Now</a>
+                </div>
+            </div>
+            <div class="product col-sm-12 col-md-6 col-lg-4">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604765/bottombanner-02_mbhwj3.jpg" alt="">
+                </div>
+                <div class="info">
+                    <span class="desc">15% off</span>
+                    <h1 class="name">Smartwatch 7 <br> light on price.</h1>
+                    <p  class="price">From $429.00</p>
+                    <a class="more" href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="product col-sm-12 col-md-6 col-lg-4">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604765/bottombanner-03_pa04hs.jpg" alt="">
+                </div>
+                <div class="info">
+                    <span class="desc">Flat 20% off</span>
+                    <h1 class="name">Five Bold Colors <br> $99 each.</h1>
+                    <p  class="price">From $290.00</p>
+                    <a class="buy" href="#">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- End product 3-->
+<!-- Start Top Categories -->
+<div class="topCategories">
+<div class="container-fluid reveal">
+    <div class="navv d-flex justify-content-between align-items-center">
+        <ul class="nav align-items-center">
+            <li class="nav-item">
+            <a class="nav-link active"href="#">Top Categories</a>
+            </li>
+            <li class="nav-item position-relative">
+            <a class="nav-link activty" href="#">Smart Phone</a>
+            </li>
+        </ul>
+        <div class="arrow">
+            <i class="fa-solid fa-angle-left prev-btn" onclick="slideLeft()"></i>
+            <i class="fa-solid fa-angle-right next-btn" onclick="slideRight()"></i>
+        </div>
+    </div>
+    <div id="topCateg" class="row gap-1 mx-0 w-100 justify-content-evenly">
+        <div class="card col-sm-4 col-md-3 col-lg-2">
+            <div class="box">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729445726/laptop1.1_gqgj9z.jpg" class="card-img-top" alt="${products[i].title}">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729445727/laptop1_fplyus.jpg" class="card-img-top hover-image" alt="${products[i].title}">
+            </div>
+            <div class="hart">
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+            <div class="card-body data">
+                <p class="card-text">Smart Watch</p>
+                <h5 class="card-title">Our Trending Products</h5>
+                <div class="stars">
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-regular fa-star"></i></a>
+                </div>
+                <p class="card-text par">$8200</p>
+                <button class="btnn" onclick="addToCart(products[i].id)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card col-sm-4 col-md-3 col-lg-2">
+            <div class="box">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729445727/phone1.1_zkmm9m.jpg" class="card-img-top" alt="${products[i].title}">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729445727/phone1_dwfgqi.jpg" class="card-img-top hover-image" alt="${products[i].title}">
+            </div>
+            <div class="hart">
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+            <div class="card-body data">
+                <p class="card-text">Smart Watch</p>
+                <h5 class="card-title">Our Trending Products</h5>
+                <div class="stars">
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-regular fa-star"></i></a>
+                </div>
+                <p class="card-text par">$8200</p>
+                <button class="btnn" onclick="addToCart('${products[i].id}')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card col-sm-4 col-md-3 col-lg-2">
+            <div class="box">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729445726/laptop2_krck9z.jpg" class="card-img-top" alt="${products[i].title}">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729445727/laptop2.2_nynzk7.jpg" class="card-img-top hover-image" alt="${products[i].title}">
+            </div>
+            <div class="hart">
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+            <div class="card-body data">
+                <p class="card-text">Smart Watch</p>
+                <h5 class="card-title">Our Trending Products</h5>
+                <div class="stars">
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-regular fa-star"></i></a>
+                </div>
+                <p class="card-text par">$8200</p>
+                <button class="btnn" onclick="addToCart('${products[i].id}')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card col-sm-4 col-md-3 col-lg-2">
+            <div class="box">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1728116079/image12_geayty.jpg" class="card-img-top" alt="${products[i].title}">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1728116079/image12.12_ckshav.jpg" class="card-img-top hover-image" alt="${products[i].title}">
+            </div>
+            <div class="hart">
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+            <div class="card-body data">
+                <p class="card-text">Smart Watch</p>
+                <h5 class="card-title">Our Trending Products</h5>
+                <div class="stars">
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-regular fa-star"></i></a>
+                </div>
+                <p class="card-text par">$8200</p>
+                <button class="btnn" onclick="addToCart('${products[i].id}')">Add to Cart</button>
+            </div>
+        </div>
+        <div class="card col-sm-4 col-md-3 col-lg-2">
+            <div class="box">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729445726/phone2_c93cra.jpg" class="card-img-top" alt="${products[i].title}">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729445727/phone2.2_vsgvq4.jpg" class="card-img-top hover-image" alt="${products[i].title}">
+            </div>
+            <div class="hart">
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+            <div class="card-body data">
+                <p class="card-text">Smart Watch</p>
+                <h5 class="card-title">Our Trending Products</h5>
+                <div class="stars">
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-solid fa-star"></i></a>
+                    <a href=""><i class="fa-regular fa-star"></i></a>
+                </div>
+                <p class="card-text par">$8200</p>
+                <button class="btnn" onclick="addToCart('${products[i].id}')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- End Top Categories -->
+<!-- gift Section -->
+<div class="gift">
+<div class="container">
+    <div class="row home-sevices">
+        <div class="col-sm-12 col-md-6 col-lg-3 box">
+            <div class="icon">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604179/icon2_y8wfvm.svg" alt="">
+            </div>
+            <div class="content">
+                <h3>Fast shipping</h3>
+                <p>Free delivery for order over $99.00.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 box">
+            <div class="icon">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604179/icon3_p3wwu7.svg" alt="">
+            </div>
+            <div class="content">
+                <h3>Online Support</h3>
+                <p>Feel free to call us & get best support.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 box">
+            <div class="icon">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604179/icon4_tyhanm.svg" alt="">
+            </div>
+            <div class="content">
+                <h3>Gift Voucher</h3>
+                <p>Refer a friend & get a surprise gifts.</p>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 box">
+            <div class="icon">
+                <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604179/icon1_lxnvny.svg" alt="">
+            </div>
+            <div class="content">
+                <h3>Secure payment</h3>
+                <p>Safe & more secure way to pay online.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- gift Section -->
+<!-- From The Blogs -->
+<div class="blogs" id="blogs">
+<div class="container-fluid">
+    <div class="navv d-flex justify-content-between align-items-center">
+        <ul class="nav align-items-center">
+            <li class="nav-item">
+            <a class="nav-link active"href="#">From The Blogs</a>
+            </li>
+        </ul>
+    </div>
+    <div class="from row">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="box">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604358/blog1_depfj8.jpg" alt="">
+                    <div class="image-hove"></div>
+                    <div class="post-hove">
+                        <div class="full-img">
+                            <a href="https://opc.webdigify.com/OPC03/OPC090_quickstore/image/cache/catalog/blog2-1040x730.jpg"
+                            class="icon zoom" 
+                            title="Click to view Full Image"><i class="fa fa-search-plus"></i></a>
+                        </div>
+                        <div class="read-more">
+                            <a href="https://opc.webdigify.com/OPC03/OPC090_quickstore/image/cache/catalog/blog2-1040x730.jpg"
+                            class="icon readmore_link" 
+                            title="Click to view Read More "><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <span><p>25 February 2022</p></span>
+                    <h4><a href="">more recently with desktop publishing software like</a></h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu...</p>
+                    <a class="more" href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="box">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604358/blog2_mumxqf.jpg" alt="">
+                    <div class="image-hove"></div>
+                    <div class="post-hove">
+                        <div class="full-img">
+                            <a href="https://opc.webdigify.com/OPC03/OPC090_quickstore/image/cache/catalog/blog2-1040x730.jpg"
+                            class="icon zoom" 
+                            title="Click to view Full Image"><i class="fa fa-search-plus"></i></a>
+                        </div>
+                        <div class="read-more">
+                            <a href="https://opc.webdigify.com/OPC03/OPC090_quickstore/image/cache/catalog/blog2-1040x730.jpg"
+                            class="icon readmore_link" 
+                            title="Click to view Read More "><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <span><p>17 February 2022</p></span>
+                    <h4><a href="">more recently with desktop publishing software like</a></h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu...</p>
+                    <a class="more" href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="box">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604358/blog3_wq5pqo.jpg" alt="">
+                    <div class="image-hove"></div>
+                    <div class="post-hove">
+                        <div class="full-img">
+                            <a href="https://opc.webdigify.com/OPC03/OPC090_quickstore/image/cache/catalog/blog2-1040x730.jpg"
+                            class="icon zoom" 
+                            title="Click to view Full Image"><i class="fa fa-search-plus"></i></a>
+                        </div>
+                        <div class="read-more">
+                            <a href="https://opc.webdigify.com/OPC03/OPC090_quickstore/image/cache/catalog/blog2-1040x730.jpg"
+                            class="icon readmore_link" 
+                            title="Click to view Read More "><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <span><p>25 February 2022</p></span>
+                    <h4><a href="">more recently with desktop publishing software like</a></h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu...</p>
+                    <a class="more" href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="box">
+                <div class="img">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604358/blog4_dxu12g.jpg" alt="">
+                    <div class="image-hove"></div>
+                    <div class="post-hove">
+                        <div class="full-img">
+                            <a href="https://opc.webdigify.com/OPC03/OPC090_quickstore/image/cache/catalog/blog2-1040x730.jpg"
+                            class="icon zoom" 
+                            title="Click to view Full Image"><i class="fa fa-search-plus"></i></a>
+                        </div>
+                        <div class="read-more">
+                            <a href="https://opc.webdigify.com/OPC03/OPC090_quickstore/image/cache/catalog/blog2-1040x730.jpg"
+                            class="icon readmore_link" 
+                            title="Click to view Read More "><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <span><p>20 February 2022</p></span>
+                    <h4><a href="">more recently with desktop publishing software like</a></h4>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu...</p>
+                    <a class="more" href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- From The Blogs -->
+ <!-- Care -->
+<section class="care">
+<div class="container">
+    <div class="swiper mySwipertrending">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="trendingImg">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604526/dell_n1w615.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="trendingImg">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604526/intel_f7ovxx.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="trendingImg">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604526/canon_yrbqsf.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="trendingImg">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604525/bose_ywee3l.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="trendingImg">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604525/apple_sipb7k.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="trendingImg">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604529/sandisk_bpseab.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="trendingImg">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604526/olg_rku5sn.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Care -->
+<!-- Start Key Footer -->
+<section class="subscribe" id="footer">
+<div class="container">
+<div class="contain">
+    <div class="input position-relative">
+        <div class="row sub d-flex justify-content-center align-items-center">
+            <div class="col-sm-12 col-lg-5 sign d-flex align-items-center justify-content-center">
+                    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604180/icon5_ngm4th.svg" alt="" style="width: 50px; margin-right: 5px;">
+                <h4>Sign up for newsletter</h4>
+            </div>
+            <form class="col-sm-12 col-lg-7 subscribe-form justify-content-center">
+                <p>Get 30% discount on your next purchase.</p>
+                <input type="email" id="email" placeholder="Enter your email...">
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End Key Footer -->
+<!-- Start Footer -->
+<div class="footer">
+<div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-3">
+        <h4 class="mb-4 text-white">Contact Us</h4>
+        <p>502 New design str, melbourne, san francisco, CA 94110, united states of america.</p>
+        <p>01095317807</p>
+        <p>mohamedbakhetoiu@gmail.com</p>
+        <div class="link">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-2">
+        <h4 class="mb-5 text-white">My Account</h4>
+        <p><a href="">> My Account</a></p>
+        <p><a href="">> Order History</a></p>
+        <p><a href="">> Wish List</a></p>
+        <p><a href="">> Affiliates</a></p>
+        <p><a href="">> Contact Us</a></p>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-2">
+        <h4 class="mb-5 text-white">Information</h4>
+        <p><a href="">> About Us</a></p>
+        <p><a href="">> Delivery Information</a></p>
+        <p><a href="">> Privacy Policy</a></p>
+        <p><a href="">> Terms & Conditions</a></p>
+        <p><a href="">> Blogs</a></p>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-2">
+        <h4 class="mb-5 text-white">Extras</h4>
+        <p><a href="">> Site Map</a></p>
+        <p><a href="">> Newsletter</a></p>
+        <p><a href="">> Brands</a></p>
+        <p><a href="">> Contact Us</a></p>
+        <p><a href="">> Specials</a></p>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-3">
+        <h4 class="mb-5 text-white">Our App</h4>
+        <p>Download our Apps and get
+        brextra 15% Discount on your first Order…!</p>
+        <div class="img d-flex gap-2 mt-4">
+            <img class="w-50" src="../image/1.png" alt="">
+            <img class="w-50" src="../image/2.png" alt="">
+        </div>
+    </div>
+</div>
+</div>
+<footer class="d-flex justify-content-between align-items-center">
+<div class="p">
+    <p class="m-0">Powered By OpenCart QuickStore © 2024</p>
+</div>
+<div class="visa">
+    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604179/maestro_jd7srl.png" alt="">
+    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604179/mastercard_xojxca.png" alt="">
+    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604180/paypal_ntv96n.png" alt="">
+    <img src="https://res.cloudinary.com/dbjc13fxq/image/upload/v1729604181/visa_f5dipz.png" alt="">
+</div>
+</footer>
+</div>
+</section>
+<!-- End Footer -->
+
+
+
+<!-- Swiper File -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./js/all.min.js"></script>
+<script src="./js/logout.js"></script>
+<script src="./js/products.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
